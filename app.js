@@ -6,6 +6,7 @@ app.listen(port);
 console.log(`App is running on ${port}`);
 
 app.get('/', function(req,res){
+	console.log(res.send.toString());
 	res.send('Hello my friend!');
 });
 
