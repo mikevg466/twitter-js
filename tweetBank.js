@@ -1,12 +1,13 @@
 'use strict';
-
+var counter = 0;
 const _ = require('lodash');
 
 var data = [];
 var exports = module.exports = {};
 
 exports.add = function(name, content){
-  data.push({name: name, content: content});
+  data.push({name: name, content: content, index: (counter + '')});
+  counter++;
 };
 exports.list = function(){
   return _.cloneDeep(data);
