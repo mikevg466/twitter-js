@@ -3,7 +3,7 @@ const nunjucks = require('nunjucks');
 const app = express();
 // const volley = require('volleyball');
 var port = 3000;
-const people = [{name: 'Full'}, {name: 'Stacker'}, {name:'Son'}];
+const people = [{name: 'Full'}, {name: 'Stacker'}, {name:'Son'}, {name: 'Jeremy'}, {name: 'Mike'}];
 
 
 app.listen(port);
@@ -11,7 +11,7 @@ console.log(`App is running on ${port}`);
 
 app.get('/', function(req, res, next){
 	console.log(req.method, req.route.path);
-	res.render('index', {title: 'Hall of Fame', people: people});
+	res.render('index', {title: 'Hell of Shame', people: people});
 	next();
 });
 
